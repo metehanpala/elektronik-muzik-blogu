@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
 
 @Component({
   selector: 'app-blog-post',
@@ -13,9 +13,9 @@ export class BlogPostComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.route.params.subscribe(params => {
-      this.postId = params['postId'];
 
+    this.route.params.subscribe(params => {
+      console.info('POSTID:', this.postId);
       // Burada, gerçek verileri API'den veya başka bir kaynaktan alabilirsiniz.
       // Şu anda, params nesnesinden postId değerine göre örnek bir veri kullanıyorum.
       if (this.postId === 1) {

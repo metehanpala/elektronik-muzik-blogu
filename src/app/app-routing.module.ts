@@ -4,7 +4,7 @@ import { BlogPostComponent } from './blog-post/blog-post.component';
 import { MusicProductionComponent } from './music-production/music-production.component';
 
 const routes: Routes = [
-  { path: 'blog-post', component: BlogPostComponent },
+  { path: 'blog-post/:postId', component: BlogPostComponent },
   { path: 'music-production', component: MusicProductionComponent }
 ];
 
